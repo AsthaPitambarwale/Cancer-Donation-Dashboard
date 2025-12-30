@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 
 export default function ActivityFeed({ donations }) {
-  const recent = donations.slice(-10).reverse();
+  const recent = donations.slice(-7).reverse();
     return (
     <div className="panel feed">
       <h2>Recent Activity</h2>
