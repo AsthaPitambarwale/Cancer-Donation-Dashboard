@@ -34,7 +34,7 @@ export default function App() {
     if (!running) return;
 
     const timer = setInterval(() => {
-      setDonations(prev => [...prev.slice(-14), generateDonation()]);
+      setDonations(prev => [...prev, generateDonation()]);
     }, 2500);
 
     return () => clearInterval(timer);
