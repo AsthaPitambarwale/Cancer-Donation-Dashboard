@@ -1,13 +1,14 @@
 import { motion } from "framer-motion";
 
 export default function ActivityFeed({ donations }) {
-  return (
+  const recent = donations.slice(-10).reverse();
+    return (
     <div className="panel feed">
       <h2>Recent Activity</h2>
 
-      {donations.slice().reverse().map(d => (
+      {recent.map((d, i) => (
         <motion.div
-          key={d.id}
+          key={i}
           className="feed-item"
           initial={{ opacity: 0, x: 20 }}
           animate={{ opacity: 1, x: 0 }}
